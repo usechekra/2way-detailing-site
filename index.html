@@ -105,9 +105,13 @@
   }
   .pad-logo-spin{
     position:absolute; left:35.64%; top:79.34%; width:9.83%; height:12.91%;
-    transform-origin:50% 50%; animation:padspin .9s linear infinite;
+    transform-origin:50% 50%; animation:padtwist .32s ease-in-out infinite;
   }
-  @keyframes padspin{ to{ transform:rotate(360deg); } }
+  @keyframes padtwist{
+    0%{ transform:rotate(-15deg); }
+    50%{ transform:rotate(15deg); }
+    100%{ transform:rotate(-15deg); }
+  }
   @media (prefers-reduced-motion: reduce){ .pad-logo-spin{ animation:none; } }
   @media (max-width:640px){ .hero-logo{ width:100%; text-align:center; } .pad-logo-base{ height:110px; } .hero-copy-row{ justify-content:center; text-align:center; } }
   .hero .eyebrow{ color:var(--hero-blue); text-shadow:0 0 20px rgba(143,184,255,.5), 0 1px 3px rgba(0,0,0,.9); }
